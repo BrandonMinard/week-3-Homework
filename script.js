@@ -24,6 +24,8 @@ function generatePassword() {
 
   //Starting password length input
   let length = prompt("Please input the desired length of your new password between 5 and 128");
+  //cast length to int
+  length = parseInt(length)
 
   //Do this if and only if the starting input was outside acceptable bounds.
   //Then repeats until the input is within bounds, and continues.
@@ -66,7 +68,8 @@ function generatePassword() {
 
     //just for confirmation it is the correct length.
     if (pwResult.length !== length) {
-      alert("Password not correct length!!")
+      alert("Password not correct length!! expected " + length + " was actually " + pwResult.length)
+      console.log("Password not correct length!! expected " + length + " was actually " + pwResult.length)
     }
 
     return pwResult;
