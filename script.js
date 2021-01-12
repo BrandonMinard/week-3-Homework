@@ -29,6 +29,7 @@ function generatePassword() {
 
   //Do this if and only if the starting input was outside acceptable bounds.
   //Then repeats until the input is within bounds, and continues.
+  //Also acts to prevent non-number characters from being accepted
   while (!(length >= 5 && length <= 128)) {
     alert("Inputted length outside of acceptable bounds, please try again")
     length = prompt("Please input the desired length of your new password between 5 and 128");
